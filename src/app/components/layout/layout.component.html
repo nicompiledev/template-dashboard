@@ -1,0 +1,55 @@
+<!-- <mat-toolbar style="background-color: #3f51b5; color: #fff;">
+  <div class="logo text-center">
+    <img width="100" src="assets/logocarwash.png" alt="">
+  </div>
+  <h1>Admin LavaSoft</h1>
+  <button type="button" mat-button (click)="drawer.toggle()">
+    Toggle sidenav
+  </button>
+  <span class="example-spacer"></span>
+  <button routerLink="/list" mat-raised-button color="accent">Ver Registros</button>
+</mat-toolbar> -->
+
+
+
+
+
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>My App</span>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button routerLink="/list" mat-raised-button color="accent">Ver Registros</button>
+    </mat-toolbar-row>
+
+
+  </mat-toolbar>
+
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <!-- <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet> </router-outlet>
+
+  </div>
+
+</mat-drawer-container>
+

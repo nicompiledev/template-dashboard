@@ -1,0 +1,65 @@
+<mat-card class="example-card text-center">
+  <mat-card-header class="justify-content-center">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{userDetails.nombreLavadero}}</mat-card-title>
+    <mat-card-subtitle>( {{userDetails.nombreResponsable}} {{userDetails.apellidoResponsable}} )</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <div matLine>
+          Telefono:
+          <button mat-button>{{userDetails.telefono}}</button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div matLine>
+          Direccion :
+          <button mat-button>{{userDetails.direccion}}</button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div matLine>
+          Tipo Servicio:
+          <button mat-button>{{userDetails.tipoServicio}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div matLine>
+          Paquete:
+          <button mat-button>{{userDetails.paquete}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div matLine>
+          Email:
+          <button mat-button>{{userDetails.email}}</button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div matLine>
+          ¿Activo?:
+          <button mat-button>{{userDetails.estado}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item class="auto-height">
+        <div class="serviciosOfrecidos">
+          <span>Oferta Servicios:</span>
+          <button mat-button>
+            <mat-chip-listbox>
+              <ng-container *ngFor="let row of userDetails.oferta">
+                <mat-chip-option selected>{{row}}</mat-chip-option>
+              </ng-container>
+            </mat-chip-listbox>
+          </button>
+        </div>
+      </mat-list-item>
+
+
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,126 @@
+
+
+<div class="registration-form m-3 p-4">
+  <form [formGroup]="registrationForm">
+    <div class="row">
+      <!-- Nombre Lavadero -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre Lavadero</mat-label>
+          <input formControlName="nombreLavadero" matInput placeholder="Nombre Lavadero">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <!-- Nombre Encargado -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre Responsable</mat-label>
+          <input formControlName="nombreResponsable" matInput placeholder="Nombre Responsable">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <!-- Apellido Encargado -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Apellido Responsable</mat-label>
+          <input formControlName="apellidoResponsable" matInput placeholder="Apellido Responsable">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <!-- Telefono -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Telefono</mat-label>
+          <input  formControlName="telefono" matInput placeholder="Telefono">
+          <mat-icon matSuffix>mobile_screen_share</mat-icon>
+        </mat-form-field>
+      </div>
+      <!-- Email -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="email">
+          <mat-icon matSuffix>mail_outline</mat-icon>
+        </mat-form-field>
+      </div>
+      <!-- Direccion -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Direccion</mat-label>
+          <input formControlName="direccion" matInput placeholder="Direccion">
+          <mat-icon matSuffix>mail_outline</mat-icon>
+        </mat-form-field>
+      </div>
+
+      
+
+      <!-- Tipo Servicio -->
+      <div class="col-md-6">
+        <label id="example-radio-group-label-servicio">Tipo de Servicio:</label>
+        <mat-radio-group formControlName="tipoServicio" aria-labelledby="example-radio-group-label"
+          class="example-radio-group">
+          <mat-radio-button class="example-radio-button" *ngFor="let tipoServicio of tipoServicios" [value]="tipoServicio">
+            {{tipoServicio}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <div>Tipo de servicio seleccionado: {{this.registrationForm.value?.tipoServicio}}</div>
+      </div>
+      <!-- Estado Membresia -->
+      <div class="col-md-6">
+        <label id="example-radio-group-label-estado">¿Se encuentra activo?</label>
+        <mat-radio-group formControlName="estado" aria-labelledby="example-radio-group-label"
+          class="example-radio-group">
+          <mat-radio-button class="example-radio-button" *ngFor="let opcionEstado of ['Si', 'No']" [value]="opcionEstado">
+            {{opcionEstado}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <div>Membresia activa: {{this.registrationForm.value?.estado}}</div>
+      </div>
+      <!-- Paquete -->
+      <div class="col-md-6 mt-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Seleccione paquete</mat-label>
+          <mat-select formControlName="paquete">
+            <mat-option *ngFor="let paquete of paquetes" [value]="paquete">
+              {{paquete}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!-- Oferta de servicios -->
+      <div class="col-md-6 mt-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Oferta de sevicios
+          </mat-label>
+          <mat-select formControlName="oferta" multiple>
+            <mat-option *ngFor="let oferta of ofertaServicios" [value]="oferta">{{oferta}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!-- Socio Nuevo -->
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>¿Socio por primera vez?</mat-label>
+          <mat-select formControlName="socioNuevo">
+            <mat-option *ngFor="let nuevo of ['Si', 'No']" [value]="nuevo">
+              {{nuevo}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha de activacion: </mat-label>
+          <input formControlName="fechaActivacion" matInput [matDatepicker]="picker" placeholder="Selecione la fecha">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <button *ngIf="!isUpdateActive" (click)="submit()" mat-raised-button color="accent">Registrar</button>
+    <button *ngIf="isUpdateActive" (click)="update()" mat-raised-button color="accent">Actualizar</button>
+  </form>
+</div>

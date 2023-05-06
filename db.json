@@ -1,0 +1,96 @@
+{
+  "registered": [
+    {
+      "nombreLavadero": "Lavadero la 21",
+      "nombreResponsable": "Nico",
+      "apellidoResponsable": "Franco",
+      "telefono": "3215601894",
+      "email": "n@n.com",
+      "direccion": "las americas",
+      "tipoServicio": "Básico",
+      "estado": "Si",
+      "paquete": "Mensual",
+      "oferta": [
+        "Lavado sencillo",
+        "Lavado y aspirado"
+      ],
+      "socioNuevo": "Si",
+      "fechaActivacion": "2023-04-06T05:00:00.000Z",
+      "id": 6
+    },
+    {
+      "nombreLavadero": "lavadero norte",
+      "nombreResponsable": "carlos",
+      "apellidoResponsable": "martinez",
+      "telefono": "321465797",
+      "email": "c@c.com",
+      "direccion": "norte",
+      "tipoServicio": "VIP",
+      "estado": "No",
+      "paquete": "Trimestral",
+      "oferta": [
+        "Lavado sencillo",
+        "Lavado y aspirado",
+        "Lavado, aspirado, encerado, pulido y tapicería"
+      ],
+      "socioNuevo": "No",
+      "fechaActivacion": "2023-04-28T05:00:00.000Z",
+      "id": 7
+    },
+    {
+      "nombreLavadero": "lavadero washalo",
+      "nombreResponsable": "santiago",
+      "apellidoResponsable": "rivera",
+      "telefono": "3205001177",
+      "email": "s@s.com",
+      "direccion": "las americas",
+      "tipoServicio": "Premiun",
+      "estado": "Si",
+      "paquete": "Trimestral",
+      "oferta": [
+        "Lavado, aspirado y encerado",
+        "Lavado, aspirado, encerado, pulido y tapicería"
+      ],
+      "socioNuevo": "Si",
+      "fechaActivacion": "2023-04-27T05:00:00.000Z",
+      "id": 8
+    },
+    {
+      "nombreLavadero": "lavadero del sur",
+      "nombreResponsable": "Andrea",
+      "apellidoResponsable": "Hernandez",
+      "telefono": "3215604964",
+      "email": "a@a.com",
+      "direccion": "los naranjos",
+      "tipoServicio": "Premiun",
+      "estado": "Si",
+      "paquete": "Anual",
+      "oferta": [
+        "Lavado y aspirado",
+        "Lavado, aspirado, encerado y pulido"
+      ],
+      "socioNuevo": "Si",
+      "fechaActivacion": "2023-04-30T05:00:00.000Z",
+      "id": 9
+    },
+    {
+      "nombreLavadero": "lavadero prueba",
+      "nombreResponsable": "nicolas",
+      "apellidoResponsable": "rivera",
+      "telefono": "3215601894",
+      "email": "n@n.com",
+      "direccion": "armenia",
+      "tipoServicio": "Básico",
+      "estado": "Si",
+      "paquete": "Trimestral",
+      "oferta": [
+        "Lavado y aspirado",
+        "Lavado, aspirado y encerado",
+        "Lavado, aspirado, encerado, pulido y tapicería"
+      ],
+      "socioNuevo": "Si",
+      "fechaActivacion": "2023-05-06T05:00:00.000Z",
+      "id": 10
+    }
+  ]
+}
